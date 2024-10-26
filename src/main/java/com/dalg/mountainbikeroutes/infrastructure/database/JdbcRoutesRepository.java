@@ -22,7 +22,7 @@ public class JdbcRoutesRepository implements RoutesRepository {
     }
 
     @Override
-    public List<Route> findAllRoutes() {
+    public List<Route> getAllRoutes() {
         return namedParameterJdbcTemplate.query(
                 """
                         select * from routes

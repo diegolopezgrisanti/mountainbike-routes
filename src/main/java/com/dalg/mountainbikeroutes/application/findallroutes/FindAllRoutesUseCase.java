@@ -13,7 +13,7 @@ public class FindAllRoutesUseCase {
 
     public FindAllRoutesUseCase(RoutesRepository routesRepository) { this.routesRepository = routesRepository; }
 
-    public List<Route> getAllRoutes() {
-        return routesRepository.findAllRoutes();
+    public List<Route> execute() {
+        return routesRepository.getAllRoutes();
     }
 }
