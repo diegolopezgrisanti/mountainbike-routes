@@ -21,22 +21,28 @@ dependencies {
 	val FLYWAY = "9.11.0"
 	val LOMBOK = "1.18.34"
 	val POSTGRESQL = "42.7.4"
+	val JUNIT = "5.11.3"
+	val ASSERTJ = "3.26.3"
+	val MOCKITO = "5.14.2"
 
+	annotationProcessor("org.projectlombok:lombok:$LOMBOK")
+
+	compileOnly("org.projectlombok:lombok:$LOMBOK")
 
 	implementation("org.springframework.boot:spring-boot-starter-data-jdbc")
 	implementation("org.springframework.boot:spring-boot-starter-web")
 	implementation("org.postgresql:postgresql:$POSTGRESQL")
 	implementation("org.flywaydb:flyway-core:$FLYWAY")
 
-	developmentOnly("org.springframework.boot:spring-boot-devtools")
+	testCompileOnly("org.projectlombok:lombok:$LOMBOK")
 
 	testImplementation("org.springframework.boot:spring-boot-starter-test")
+	testImplementation(platform("org.junit:junit-bom:$JUNIT"))
+	testImplementation("org.junit.jupiter:junit-jupiter")
+	testImplementation("org.assertj:assertj-core:$ASSERTJ")
+	testImplementation("org.mockito:mockito-core:$MOCKITO")
 
 	testRuntimeOnly("org.junit.platform:junit-platform-launcher")
-
-	compileOnly("org.projectlombok:lombok:$LOMBOK")
-
-	annotationProcessor("org.projectlombok:lombok:$LOMBOK")
 }
 
 tasks.withType<Test> {
