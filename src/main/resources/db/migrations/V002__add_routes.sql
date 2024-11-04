@@ -1,4 +1,4 @@
 INSERT INTO routes (name, difficulty, distance) VALUES
-    ('Ruta A', 'Fácil', 10.5),
-    ('Ruta B', 'Intermedia', 15.0),
-    ('Ruta C', 'Difícil', 25.3);
+    ('Route A', 'Easy', 10.5),
+    ('Route B', 'Intermediate', 15.0),
+    ('Route C', 'Difficult', 25.3);

@@ -23,6 +23,6 @@ public class RoutesController {
     @GetMapping
     @ResponseStatus(HttpStatus.OK)
     public List<Route> getAllRoutes() {
-        return findAllRoutesUseCase.getAllRoutes();
+        return findAllRoutesUseCase.execute();
     }
 }
